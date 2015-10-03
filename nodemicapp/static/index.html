@@ -4,6 +4,7 @@
 <head>
 	<title>EasyRTC Demo: Simple Video+Audio</title>
 	<link rel="stylesheet" type="text/css" href="/easyrtc/easyrtc.css" />
+	<script type="text/javascript " src="js/jquery-2.1.4.js "></script>
 
 	<!-- Assumes global locations for socket.io.js and easyrtc.js -->
 	<script src="/socket.io/socket.io.js"></script>
@@ -13,15 +14,23 @@
 </head>
 
 <body onload="connect();">
+	<div id="auth">
+		<p> testing this section</p>
+	</div>
 	<div id="demoContainer">
+		<!-- 
+		----	div tag for the connection issues (need to change so admin can only control. users cannot see this) 
+		----    Need to make a "in que area for the users for Que checking if there is going to be one.
+		---->
 		<div id="connectControls">
 			<div id="iam">Not yet connected...</div>
 			<br />
 			<strong>Connected users:</strong>
 			<div id="otherClients"></div>
 		</div>
+
 		<div id="videos">
-			<video autoplay="autoplay" class="easyrtcMirror" id="selfVideo" muted="muted" volume="0"></video>
+			<!-- <video autoplay="autoplay" class="easyrtcMirror" id="selfVideo" muted="muted" volume="0"></video> -->
 			<div style="position:relative;float:left;">
 				<video autoplay="autoplay" id="callerVideo"></video>
 			</div>

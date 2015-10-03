@@ -1,3 +1,23 @@
+$(function () {
+
+	$("#auth").show();
+	// or
+	$("#demoContainer").hide();
+
+	$(document).on('click', '.btn-join-group', function (event) {
+		event.stopPropagation();
+		var data = {
+			client: App.client.get(),
+			params: {
+				group: this.value,
+				profile: App.profile.getId()
+			}
+		};
+		socket.emit('join_group', data);
+	});
+
+});
+
 var selfEasyrtcid = "";
 
 
