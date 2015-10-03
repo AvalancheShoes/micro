@@ -4,16 +4,26 @@ $(function () {
 	// or
 	$("#demoContainer").hide();
 
-	$(document).on('click', '.btn-join-group', function (event) {
-		event.stopPropagation();
-		var data = {
-			client: App.client.get(),
-			params: {
-				group: this.value,
-				profile: App.profile.getId()
-			}
-		};
-		socket.emit('join_group', data);
+	$("#pwCheck").hide();
+
+	$(document).on('click', '.organiser', function (event) {
+		$("#auth").hide();
+		$("#pwCheck").show();
+	});
+
+	$(document).on('click', '.audience', function (event) {
+		$("#auth").hide();
+		$("#demoContainer").show();
+		$("#connectControls").hide();
+	});
+
+	$(document).on('click', '#next1', function (event) {
+		if ($('#pw').val() == "password") {
+			$('#pwCheck').hide();
+			$("#demoContainer").show();
+		} else {
+			$('.error').val() = "Sorry Wrong password Wolf Gang";
+		}
 	});
 
 });
