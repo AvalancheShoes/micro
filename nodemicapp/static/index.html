@@ -2,29 +2,39 @@
 <html>
 
 <head>
-	<title>EasyRTC Demo: Simple Video+Audio</title>
-	<link rel="stylesheet" type="text/css" href="/easyrtc/easyrtc.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<title>WOOFER</title>
+
+		<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/easyrtc/easyrtc.css" />
+
+	<!-- Latest compiled and minified JavaScript -->
 	<script type="text/javascript " src="js/jquery-2.1.4.js "></script>
 
 	<!-- Assumes global locations for socket.io.js and easyrtc.js -->
 	<script src="/socket.io/socket.io.js"></script>
 	<script type="text/javascript" src="/easyrtc/easyrtc.js"></script>
 	<script type="text/javascript" src="js/simple.js"></script>
-
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
-	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+
 
 </head>
 
 <body>
 	<div id="auth">
 		<div class="container">
-			<div class="col-md-4 col-md-offset-4">
-				<button class="btn btn-primary organiser">Organizer</button>
-				<button class="btn btn-primary audience">Attendee</button>
+			<div class="">
+				<div class="row">
+				<button class="btn btn-primary user-access-btn organiser">ORGANIZER</button>
+				</div>
+			</br>
+				<div class="row">
+				<button class="btn btn-primary user-access-btn audience">ATTENDEE</button>
+			</div>
 			</div>
 		</div>
 	</div>
