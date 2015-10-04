@@ -6,15 +6,22 @@ $(function () {
 
 	$("#pwCheck").hide();
 
+	$("#easyrtcMirror").hide();
+
 	$(document).on('click', '.organiser', function (event) {
 		$("#auth").hide();
 		$("#pwCheck").show();
+		$("#que").hide();
+		$("#selfVideo").hide();
+
 	});
 
 	$(document).on('click', '.audience', function (event) {
 		$("#auth").hide();
 		$("#demoContainer").show();
 		$("#connectControls").hide();
+		$("#selfVideo").show();
+		$("#callerVideo").hide();
 	});
 
 	$(document).on('click', '#next1', function (event) {
@@ -23,20 +30,23 @@ $(function () {
 			console.log("test2");
 			$('#pwCheck').hide();
 			$("#demoContainer").show();
+			connect();
 		} else {
 			$('.error').val() = "Sorry Wrong password Wolf Gang";
 		}
 	});
 
 	$(document).on('click', '#que', function (event) {
-		function connect() {
-			easyrtc.setVideoDims(640, 480);
-			easyrtc.setRoomOccupantListener(convertListToButtons);
-			easyrtc.easyApp("easyrtc.audioVideoSimple", "selfVideo", ["callerVideo"], loginSuccess, loginFailure);
-		};
-
-
+		connect();
 	});
+
+
+
+	function connect() {
+		easyrtc.setVideoDims(640, 480);
+		easyrtc.setRoomOccupantListener(convertListToButtons);
+		easyrtc.easyApp("easyrtc.audioVideoSimple", "selfVideo", ["callerVideo"], loginSuccess, loginFailure);
+	};
 
 });
 
