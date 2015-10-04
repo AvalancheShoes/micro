@@ -2,6 +2,7 @@
 <html>
 
 <head>
+	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 	<title>WOOFER</title>
@@ -40,18 +41,19 @@
 			</div>
 		</div>
 	</div>
+
 	<div id="pwCheck">
 		<div class="container">
-			<div class="col-md-4 col-md-offset-4">
+			<div class="">
 				<!-- <h1>Login</h1> -->
 
 				<input id="pw" type="password" class="form-control" placeholder="Enter Password">
 				<div>
-					<button id="next1" class="btn btn-primary">ORGANIZER LOGIN</button>
+					<button id="next1" class="btn login-btn btn-primary">ORGANIZER LOGIN</button>
 				</div>
 
 				<div>
-					<button id="return" class="btn btn-danger">Back</button>
+					<button id="return" class="btn back-btn btn-danger">Back</button>
 				</div>
 			</div>
 		</div>
@@ -60,7 +62,7 @@
 	</div>
 	<div id="atendees">
 	</div>
-	<div id="demoContainer">
+	<div id="demoContainer" class="user-askq-wrap">
 		<!--
 		----	div tag for the connection issues (need to change so admin can only control. users cannot see this)
 		----    Need to make a "in que area for the users for Que checking if there is going to be one.
@@ -68,26 +70,20 @@
 		<div id="connectControls">
 			<div id="iam">Not yet connected...</div>
 			<br />
-			<strong>Connected users:</strong>
+			<strong>ATTENDEES' QUESTION LIST:</strong>
 			<div id="otherClients"></div>
 		</div>
 
-    <row>
-		<div class="user-askq-wrap" id="videos">
+		<div id="videos">
 		  <video autoplay="autoplay" class="easyrtcMirror" id="selfVideo" muted="muted" volume="0"></video>
-			<div class="span4">
+			<div>
 				<video autoplay="autoplay" id="callerVideo"></video>
 			</div>
-			<div class="span8">	
-				<button  class="btn  btn-primary" id="que">ASK QUESTION</button>
-			</div>
-
+			<button  class="btn ask-q-btn  btn-primary" id="que">ASK QUESTION</button>
 			<div>
-
 			</div>
 			<!-- each caller video needs to be in it"s own div so it"s close button can be positioned correctly -->
 		</div>
-	</row>
 	</div>
 </body>
 

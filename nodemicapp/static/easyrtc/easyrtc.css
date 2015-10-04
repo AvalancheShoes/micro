@@ -1,6 +1,7 @@
-body {
-	background-image: url("/img/bg.jpg");
-	font-size: 3em!important;
+body{
+	  background: url(/img/bg.jpg) no-repeat center center fixed; 
+
+	background-size: 100% 100%;
 }
 
 #demoContainer {
@@ -24,9 +25,7 @@ body {
 	width: 300px;
 	border: 1px solid blue;
 	margin-left: 10px;
-	position: fixed;
-	top: 20%;
-	left: 50%;
+
 }
 
 #callerVideo {
@@ -48,5 +47,17 @@ body {
 
 .ask-q-btn {
 	display:block;
+}
+
+.org-askq-wrap {
+/*	position: fixed;
+	top: 20%;
+	left: 50%;*/
+}
+.back-btn {
+	float:left;
+}
+.login-btn {
+	float:right;
 }
 
