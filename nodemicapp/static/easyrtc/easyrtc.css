@@ -1,3 +1,8 @@
+body {
+	background-image: url("/img/bg.jpg");
+	font-size: 3em!important;
+}
+
 #demoContainer {
 	position: relative;
 }
@@ -17,9 +22,11 @@
 #selfVideo {
 	height: 225px;
 	width: 300px;
-	float: left;
-	border: 1px solid gray;
+	border: 1px solid blue;
 	margin-left: 10px;
+	position: fixed;
+	top: 20%;
+	left: 50%;
 }
 
 #callerVideo {
@@ -32,3 +39,14 @@
 .user-access-btn {
 	width: 100%;
 }
+
+.user-access-wrap {
+	position: fixed;
+	top: 20%;
+	left: 50%;
+}
+
+.ask-q-btn {
+	display:block;
+}
+
