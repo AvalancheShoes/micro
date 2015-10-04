@@ -11,33 +11,39 @@
 	<script type="text/javascript" src="/easyrtc/easyrtc.js"></script>
 	<script type="text/javascript" src="js/simple.js"></script>
 
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 </head>
 
-<body onload="connect();">
+<body>
 	<div id="auth">
 		<div class="container">
 			<div class="col-md-4 col-md-offset-4">
-				<button class="btn btn-primary">Organizer</button>
-			  <button class="btn btn-primary">Attendee</button>
+				<button class="btn btn-primary organiser">Organizer</button>
+				<button class="btn btn-primary audience">Attendee</button>
 			</div>
 		</div>
 	</div>
-	<div id="pwcheck">
-	  <div class="container">
+	<div id="pwCheck">
+		<div class="container">
 			<div class="col-md-4 col-md-offset-4">
-			  <h1>Login</h1>
-			  <form name="Login" ng-submit='login()'>
-			    <input id="password" type="password" class="form-control" placeholder = "Enter Password">
-			  <div>
-			    <button id="login" class="btn btn-primary">Login</button>
-			 	</div>
-			  </form>
+				<h1>Login</h1>
+
+				<input id="pw" type="password" class="form-control" placeholder="Enter Password">
+				<div>
+					<button id="next1" class="btn btn-primary">Login</button>
+				</div>
+
 				<div>
 					<button id="return" class="btn btn-danger">Back</button>
 				</div>
 			</div>
-	  </div>
-  </div>
+		</div>
+	</div>
 	<div id="organizer">
 	</div>
 	<div id="atendees">

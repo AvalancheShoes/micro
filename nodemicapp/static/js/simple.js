@@ -18,7 +18,9 @@ $(function () {
 	});
 
 	$(document).on('click', '#next1', function (event) {
+		console.log("test");
 		if ($('#pw').val() == "password") {
+			console.log("test2");
 			$('#pwCheck').hide();
 			$("#demoContainer").show();
 		} else {
@@ -26,16 +28,22 @@ $(function () {
 		}
 	});
 
+	$(document).on('click', '#que', function (event) {
+		function connect() {
+			easyrtc.setVideoDims(640, 480);
+			easyrtc.setRoomOccupantListener(convertListToButtons);
+			easyrtc.easyApp("easyrtc.audioVideoSimple", "selfVideo", ["callerVideo"], loginSuccess, loginFailure);
+		};
+
+
+	});
+
 });
 
 var selfEasyrtcid = "";
 
 
-function connect() {
-	easyrtc.setVideoDims(640, 480);
-	easyrtc.setRoomOccupantListener(convertListToButtons);
-	easyrtc.easyApp("easyrtc.audioVideoSimple", "selfVideo", ["callerVideo"], loginSuccess, loginFailure);
-}
+
 
 
 function clearConnectList() {
@@ -80,5 +88,5 @@ function loginSuccess(easyrtcid) {
 
 
 function loginFailure(errorCode, message) {
-	easyrtc.showError(errorCode, message);
+	//easyrtc.showError(errorCode, message);
 }
